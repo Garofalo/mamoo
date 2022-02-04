@@ -17,15 +17,18 @@ useEffect(()=>{
         setMamoos(data)
     }
     fetchMamoos()
-},[])
+},[id])
 
     return(
-    <div>
+    <div>{profile.username &&
+        <h1>{`Welcome, ${profile.username}`}</h1>}
         {
-            mamoos && mamoos.map((mam)=>(
-                <p>{mam.title}</p>
-            ))
+            mamoos.length>0 ? mamoos.map((mam)=>(
+                <p onClick={()=>nav(`/mamoo/${mam.pk}`)}>{mam.title}</p>
+            )) :
+            <div>You Need To Add A Mamoo!</div>
         }
+        
         <button onClick={()=>nav('/create')}>create</button>
     </div>)
 }

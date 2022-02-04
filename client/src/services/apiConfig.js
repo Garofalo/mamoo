@@ -32,10 +32,11 @@ export const logIn = async (credentials) => {
       const res = await api.post("/login/", credentials);
 
       localStorage.setItem('access', res.data.access)
+      localStorage.setItem('refresh', res.data.refresh)
       const decode = jwtDecode(res.data.access)
       if (decode){
           const res = await api.get(`customuser/${decode.user_id}`)
-          return res
+          return res.data
       }
     } catch (error) {
       throw error;
@@ -46,6 +47,7 @@ export const logOut = async () => {
   try {
     localStorage.removeItem("access");
     localStorage.removeItem("refresh");
+    localStorage.removeItem("token");
     return true;
   } catch (error) {
     throw error;
@@ -54,18 +56,44 @@ export const logOut = async () => {
 
 export const verifyUser = async () => {
   const refresh = localStorage.getItem("refresh");
+  console.log(refresh)
   if (refresh) {
     const res = await api.post("/refresh-token/", { refresh });
-    localStorage.setItem("access", res.data.access);
-    return res;
+    localStorage.setItem("token", res.data.access);
+    const decode = jwtDecode(res.data.access)
+      if (decode){
+          const res = await api.get(`customuser/${decode.user_id}`)
+          return res.data
+      }
   }
   return false;
 };
+
+export const deleteMamoo = async (id)=>{
+    const res = await api.delete(`/mamoo/${id}`)
+    if (res){
+        return res
+    }
+}
 
 export const getMamoos = async ()=>{
     const res = await api.get(`/mamoo/`)
     return res.data
 };
+
+export const getMamoo = async(id)=>{
+
+    try {
+
+        const res = await api.get(`/mamoo/${id}`)
+
+        return res.data
+    
+    } catch(error) {
+
+        throw error
+    }
+}
 
 export const createMamoo = async(mam) =>{
     try{
@@ -75,3 +103,21 @@ export const createMamoo = async(mam) =>{
         throw error 
     }
 };
+
+export const signUp = async (credentials) => {
+
+        try {
+            
+          const res = await api.post(`/customuser/`, credentials)
+          if (res){
+            const res = await logIn(credentials)
+            return res
+          }
+    
+        } catch (error) {
+
+          throw error
+        }  
+        
+    }
+

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { logOut } from '../../services/apiConfig'
 import { useNavigate } from 'react-router-dom'
-
+import { signUp } from '../../services/apiConfig'
 
 export default function Home({ setProfile, setToggle,  }) {
 
@@ -22,11 +22,10 @@ const onSignUp = async (e) => {
           password,
         }
         try {
-          const res = await axios.post(`${url}/customuser/`, newUser)
+          const res = await  signUp(newUser)
           if(res){
-              setProfile(res.data)
-              setToggle(e=>!e)
-              nav(`/${res.data.pk}`)
+              setProfile(res)
+              nav(`/${res.pk}`)
           }
     
         } catch (error) {
@@ -36,13 +35,17 @@ const onSignUp = async (e) => {
         }  
         
       }
-const handleLogout = async () => {
+const handleLogout = async (e) => {
+    e.preventDefault()
         const res = await logOut()
         if (res){
+            console.log(res)
             setProfile({})
             nav('/')
         }
+        console.log(res)
     }
+
 
   function renderError ()  {
 
@@ -62,18 +65,16 @@ const handleLogout = async () => {
       <form className='formR' >
         <p className='sign-up-form-text' >Username</p>
         <input type="text"  value={username} onChange={(e) => setUsername(e.target.value)} />
-        {/* <p className='sign-up-form-text'>Email</p>
-        <input type="email"  value={email} onChange={(e) => setEmail(e.target.value)} /> */}
+
         <p className='sign-up-form-text'>Password</p>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        {/* <p className='sign-up-form-text'>Confirm Password</p>
-        <input type="password"  value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} /> */}
+
         
       </form>
       <div className='error-buttons'>
           {renderError()}
         </div>
-        <button onSubmit={handleLogout}>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
     </div>
   )
 }

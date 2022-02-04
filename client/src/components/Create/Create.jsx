@@ -5,24 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Create({profile, setToggle}){
+
     const nav = useNavigate()
     const [mam, setMam] = useState({
         title: "",
         type: "",
         where: "",
         what: "",
-        user: "",
+        user: profile.pk,
+        when: parseInt((Date.now())/(1000*60*60*24))
       });
-
-useEffect(()=>{
-    const number = profile.pk
-    setMam(
-        {
-            ...mam,
-            user : number
-        }
-    )
-},[profile])
+     
 
 const handleChange = (e) => {
         const { name, value } = e.target;

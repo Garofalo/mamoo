@@ -24,10 +24,10 @@ const onSignUp = async (e) => {
           const res = await logIn(newUser)
 
           if (res){
-          setProfile(res.data)
+          setProfile(res)
           setToggle(e=>!e)
-          nav(`/${res.data.pk}`)
-        //   console.log(res)
+          nav(`/${res.pk}`)
+        
           }
           
         } catch (error) {
@@ -46,7 +46,7 @@ const onSignUp = async (e) => {
       </>
       )
     } else {
-      return <button className='buttonR' onClick={onSignUp} type="submit">Sign Up</button>
+      return <button className='buttonR' onClick={onSignUp} type="submit">Sign In</button>
     }
   }
   return (
