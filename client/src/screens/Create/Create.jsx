@@ -4,7 +4,7 @@ import { createMamoo } from "../../services/apiConfig";
 import { useNavigate } from "react-router-dom";
 
 
-export default function Create({profile, setToggle}){
+export default function Create({profile}){
 
     const nav = useNavigate()
     const [mam, setMam] = useState({
@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
           });
         const res = await createMamoo(mam);
         if(res){
-            setToggle(e=>!e)
+    
             nav(`/${profile.pk}`);
         }
         
@@ -44,7 +44,7 @@ const handleSubmit = async (e) => {
         <form  onSubmit={handleSubmit}>
       <div >
 
-        <label for="type-selector"> < br/> </label>
+        <label > < br/> </label>
         <select
           className="left-container-item"
           name="type"

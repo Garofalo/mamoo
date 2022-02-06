@@ -56,7 +56,7 @@ export const logOut = async () => {
 
 export const verifyUser = async () => {
   const refresh = localStorage.getItem("refresh");
-  console.log(refresh)
+
   if (refresh) {
     const res = await api.post("/refresh-token/", { refresh });
     localStorage.setItem("token", res.data.access);
@@ -80,6 +80,13 @@ export const getMamoos = async ()=>{
     const res = await api.get(`/mamoo/`)
     return res.data
 };
+
+
+export const getMyMamoos = async (pk)=>{
+    const res = await api.get(`/mymamoos/`)
+    return res.data
+};
+
 
 export const getMamoo = async(id)=>{
 

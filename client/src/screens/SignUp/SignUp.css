@@ -1,0 +1,11 @@
+.sign-up-bottom{
+    grid-row: 3;
+}
+.sign-up{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(5, 1fr);
+}
+.error-buttons{
+    margin-top: 2%;
+}
