@@ -6,7 +6,7 @@ import SignIn from "../SignUp/SignUp"
 
 
 
-export default function UserHome({ profile, setProfile}){
+export default function UserHome({ profile, setProfile, today}){
     const nav = useNavigate()
     const {id} = useParams()
     const [mamoos, setMamoos] = useState([])
@@ -29,6 +29,7 @@ useEffect(()=>{
     const mamoosRecent = mamoos.slice(0, 3).map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
+            <h2>{`${today - mam.when} days ago`}</h2>
         </div>
       )
 
@@ -44,14 +45,12 @@ const mamooList = function(){
 }
 
     return(
-    <div>{profile === null ? <SignIn setProfile={setProfile} profile={profile} /> :<>
+    <div>{profile === null ? <SignIn setProfile={setProfile} profile={profile} /> :
  
         
-           
+        <div>
             <div>{mamooList()}</div>
             <button onClick={()=>(nav('/mymamoos/'))}>All Mamoos</button>
-            
-        
-        <button onClick={()=>nav('/create')}>create</button></>}
+        </div>}
     </div>)
 }

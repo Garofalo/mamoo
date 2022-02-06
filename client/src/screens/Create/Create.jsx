@@ -44,9 +44,8 @@ const handleSubmit = async (e) => {
         <form  onSubmit={handleSubmit}>
       <div >
 
-        <label > < br/> </label>
+ 
         <select
-          className="left-container-item"
           name="type"
           value={mam.type}
           id="type-selector"
@@ -60,7 +59,7 @@ const handleSubmit = async (e) => {
         </select>
       </div>
       <div id="mam-card-container">
-        <h2 className="required-text">All fields are required.</h2>
+        
         <div id="top-mam-card">
           <input
             className="mam-card-item space-me"
@@ -74,7 +73,7 @@ const handleSubmit = async (e) => {
         <div id="bottom-mam-card">
           <div className="mam-id-top-form">
           <div className='bottom-right-input'>
-          <h3>Where:</h3>
+          <h3>Where were you?</h3>
           <input
             className="mam-card-item space-me"
             id="right-style"
@@ -85,14 +84,17 @@ const handleSubmit = async (e) => {
             </div>
             < br/>
             <div className='bottom-right-input-des'>
-          <h3>What:</h3>
-            <input
+          <h3>What happened?</h3>
+            <textarea
             className="mam-card-item space-me"
             id="what"
+            rows="4"
+            cols="45"
             value={mam.what}
             name="what"
             onChange={handleChange}
               />
+              <p className="required-text">Remember, you only need a title and a type, write as much or as little as you want.</p>
               </div>
           </div>
 
