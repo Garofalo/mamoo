@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { logOut } from "../../services/apiConfig";
 import logo from "../../files/logo.png"
-import m from '../../files/m.png'
+
 import './Header.css'
 import { useState } from "react";
 

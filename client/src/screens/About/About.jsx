@@ -1,4 +1,4 @@
-import m from '../../files/m.png'
+
 import { useNavigate } from 'react-router-dom'
 import './About.css'
 
