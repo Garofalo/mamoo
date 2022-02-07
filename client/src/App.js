@@ -26,7 +26,7 @@ const nav = useNavigate()
     };
     fetchUser();
     
-  });
+  },[]);
   let today = parseInt((Date.now())/(1000*60*60*24))
 
 
