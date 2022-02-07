@@ -42,7 +42,7 @@ const nav = useNavigate()
         <Route path='/signin' element={<SignIn setProfile={setProfile} profile={profile} />}/>
         <Route path='/:id' element={<UserHome profile={profile}  setProfile={setProfile} today={today}/>}/>
         <Route path='/create' element={<Create profile={profile} />}/>
-        <Route path='/mymamoos/:id' element={<MamooDetail profile={profile} />}/>
+        <Route path='/mymamoos/:id' element={<MamooDetail profile={profile} today={today} />}/>
         <Route path='/signup' element={<SignUp setProfile={setProfile} profile={profile} />}/>
         <Route path='/mymamoos/' element={<AllMamoos profile={profile} today={today}/>}/>
         <Route path='about'  element={<About />}/>

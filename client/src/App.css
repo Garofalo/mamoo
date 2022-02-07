@@ -31,14 +31,7 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 button {
   background: none;
   border: none;
@@ -61,4 +54,9 @@ input:focus{
 
 .violet{
   color: #5e17eb
+}
+@media (min-width: 425px) {
+    input, textarea{
+      padding: 10px;
+    }
 }

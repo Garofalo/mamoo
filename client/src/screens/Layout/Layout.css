@@ -3,3 +3,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
 }
+.layout-children{
+    grid-column: 1/6;
+    grid-row: 2/11;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}

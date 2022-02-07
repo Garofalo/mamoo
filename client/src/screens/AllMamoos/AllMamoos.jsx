@@ -62,7 +62,7 @@ const handleChange = (e) => {
             <div className="mapped-moos">
                 {mappedMoos}
             </div> 
-        <button onClick={()=>nav('/create')}>create</button>
+        
         </div>
     )
 }

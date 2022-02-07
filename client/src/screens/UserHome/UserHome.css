@@ -1,0 +1,8 @@
+.home{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 12vh);
+}
+#all-mamoos{
+    grid-row: 6
+}

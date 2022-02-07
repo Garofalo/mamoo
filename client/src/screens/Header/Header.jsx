@@ -3,8 +3,7 @@ import { logOut } from "../../services/apiConfig";
 import logo from "../../files/logo.png"
 import m from '../../files/m.png'
 import './Header.css'
-import { useState
- } from "react";
+import { useState } from "react";
 
 
 export default function Header({profile, setProfile}){
@@ -38,7 +37,7 @@ export default function Header({profile, setProfile}){
             {
                 user === true ?  
                 <header>
-                    <div id="logo-holder"><img id="logo" src={logo}/></div>
+                    <div onClick={()=>{nav('/mymamoos')}} id="logo-holder"><img  id="logo" src={logo}/></div>
                 <div className="under-header">
                     <button onClick={()=>nav(`/${profile.pk}`)}id="username">{profile.username}</button>              
                     <button onClick={decideButton}>{whichButton}</button>

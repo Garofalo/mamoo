@@ -17,10 +17,10 @@ header{
 }
 .under-header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-size: .5em;
 }
 #username{
-    margin-left: 4%;
+
     font-family: 'Roboto Condensed', sans-serif;
 }

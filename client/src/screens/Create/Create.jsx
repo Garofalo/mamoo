@@ -37,13 +37,13 @@ const handleSubmit = async (e) => {
         if (mam.where === ""){
           setMam({
             ...mam,
-            where: "You decided to leave this blank"
+            where: "Location Omitted"
           })
         }
         if (mam.what === ""){
           setMam({
             ...mam,
-            what: "You decided to leave this blank"
+            what: "Description Omitted"
           })
         }
         const res = await createMamoo(mam);
@@ -60,7 +60,7 @@ const handleSubmit = async (e) => {
       <div >
 
         <h1>Mamoorialize</h1>
-        <div className="box">
+        <div className="box" id="type-selector">
           <select name="type" value={mam.type} onChange={handleChange}>
             <option>What Kind of Mamoo?</option>
             <option value="Good Times">Good Times</option>
@@ -70,30 +70,26 @@ const handleSubmit = async (e) => {
           </select>
         </div>
       </div>
-      <div id="mam-card-container">
-        
-        
+      <div id="create-inputs">
+        <div>
           <input
-            className="mam-card-item space-me"
-            id="right-title"
             placeholder="Enter a Title"
             value={mam.title}
             name="title"
             onChange={handleChange}
           />
-
+        </div>
+        <div>
           <input
-            className="mam-card-item space-me"
-            id="right-style"
-            placeholder="Describe where you are"
+            placeholder="Describe Where you are"
             value={mam.where}
             name="where"
             onChange={handleChange}
               />
-
+        </div>
+        <div>
             <textarea
-            className="mam-card-item space-me"
-            placeholder="Use up to 1024 character to describe what's happening, and how you're feeling."
+            placeholder="Use up to 1024 character to describe what's happening"
             id="what"
             rows="4"
             cols="25"
@@ -101,13 +97,9 @@ const handleSubmit = async (e) => {
             name="what"
             onChange={handleChange}
               />
-              <p id={validate}>Remember, you only need a title and a type, write as much or as little as you want.</p>
-              
-          
+        </div>
+            <p id={validate}>Remember, you only need a title and a type, write as much or as little as you want.</p>
 
-    
-        
-        
       </div>
       <div id="mam-card-submit">
         <button type="submit" onClick={handleSubmit}>Submit</button>

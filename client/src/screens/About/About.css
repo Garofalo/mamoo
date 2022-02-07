@@ -1,0 +1,11 @@
+.about>p{
+    font-size: 1.5em;
+    margin: 10%;
+}
+
+@media (min-width:450px) {
+    .about{
+        width: 20vw;
+        margin: 0 auto;
+    }
+}

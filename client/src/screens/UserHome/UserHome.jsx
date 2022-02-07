@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { getMyMamoos } from "../../services/apiConfig"
 import { useNavigate } from "react-router-dom"
 import SignIn from "../SignUp/SignUp"
+import './UserHome.css'
 
 
 
@@ -48,12 +49,12 @@ const mamooList = function(){
     <div>{profile === null ? <SignIn setProfile={setProfile} profile={profile} /> :
  
         
-        <div>
-            <div>
-                <h1>Your Recent Mamoos</h1>
-            </div>
+        <div className="home">
+            
+            <h1>Your Recent Mamoos</h1>
+            
             <div>{mamooList()}</div>
-            <button onClick={()=>(nav('/mymamoos/'))}>All Mamoos</button>
+            <button id="all-mamoos" onClick={()=>(nav('/mymamoos/'))}>Memory Lane</button>
         </div>}
     </div>)
 }
