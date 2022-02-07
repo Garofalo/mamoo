@@ -26,7 +26,7 @@ const onSignUp = async (e) => {
 
           if (res){
           setProfile(res)
-          nav(`/${res.pk}`)
+          nav(`/mymamoos`)
         
           }
           

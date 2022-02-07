@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
         const res = await createMamoo(mam);
         if(res){
     
-            nav(`/${profile.pk}`);
+            nav(`/mymamoos`);
         }}
         
       };

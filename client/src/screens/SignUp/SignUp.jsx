@@ -28,7 +28,7 @@ const onSignUp = async (e) => {
             const res = await  signUp(newUser)
             if(res){
               setProfile(res)
-              nav(`/${res.pk}`)
+              nav(`/mymamoos`)
             }
     
         } catch (error) {

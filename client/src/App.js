@@ -27,7 +27,7 @@ const nav = useNavigate()
     fetchUser();
     
   },[]);
-  
+
   let today = parseInt((Date.now())/(1000*60*60*24))
 
 
@@ -41,7 +41,7 @@ const nav = useNavigate()
       <Routes>
         <Route path='/' element={<UserHome setProfile={setProfile} profile={profile} />}/>
         <Route path='/signin' element={<SignIn setProfile={setProfile} profile={profile} />}/>
-        <Route path='/:id' element={<UserHome profile={profile}  setProfile={setProfile} today={today}/>}/>
+        {/* <Route path='/:id' element={<UserHome profile={profile}  setProfile={setProfile} today={today}/>}/> */}
         <Route path='/create' element={<Create profile={profile} />}/>
         <Route path='/mymamoos/:id' element={<MamooDetail profile={profile} today={today} />}/>
         <Route path='/signup' element={<SignUp setProfile={setProfile} profile={profile} />}/>
