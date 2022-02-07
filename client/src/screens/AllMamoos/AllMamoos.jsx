@@ -1,5 +1,5 @@
-import { getMamoos, getMyMamoos } from "../../services/apiConfig"
-import { useState,useEffect } from "react"
+import {  getMyMamoos } from "../../services/apiConfig"
+import { useState ,useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { sortMamoos } from "../../components/MamooSorter/MamooSorter"
 import './AllMamoos.css'

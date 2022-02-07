@@ -16,7 +16,7 @@ import Layout from './screens/Layout/Layout';
 function App() {
 
 
-const [profile, setProfile] = useState({})
+const [profile, setProfile] = useState(null)
 const nav = useNavigate()
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const nav = useNavigate()
     };
     fetchUser();
     
-  }, []);
+  });
   let today = parseInt((Date.now())/(1000*60*60*24))
 
 

@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { logOut } from "../../services/apiConfig";
 import logo from "../../files/logo.png"
 
@@ -37,7 +37,7 @@ export default function Header({profile, setProfile}){
             {
                 user === true ?  
                 <header>
-                    <div onClick={()=>{nav('/mymamoos')}} id="logo-holder"><img  id="logo" src={logo}/></div>
+                    <div onClick={()=>{nav('/mymamoos')}} id="logo-holder"><img alt='mamoo' id="logo" src={logo}/></div>
                 <div className="under-header">
                     <button onClick={()=>nav(`/${profile.pk}`)}id="username">{profile.username}</button>              
                     <button onClick={decideButton}>{whichButton}</button>
@@ -48,7 +48,7 @@ export default function Header({profile, setProfile}){
                 : 
                 <header>
 
-                    <div id="logo-holder"><img id="logo" src={logo}/></div>
+                    <div id="logo-holder"><img id="logo" alt="mamoo" src={logo}/></div>
                 </header>
             }
         </div>

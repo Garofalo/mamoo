@@ -27,7 +27,7 @@ useEffect(()=>{
 
         nav('/signin')
     }
-},[profile, id])
+},[profile, id, nav])
 
 
     const mamoosRecent = mamoos.slice(0, 3).map(

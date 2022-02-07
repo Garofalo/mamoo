@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import axios from 'axios'
-import { logOut } from '../../services/apiConfig'
 import { useNavigate } from 'react-router-dom'
 import { signUp } from '../../services/apiConfig'
 import './SignUp.css'
