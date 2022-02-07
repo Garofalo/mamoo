@@ -14,12 +14,15 @@ export default function UserHome({ profile, setProfile, today}){
 
 useEffect(()=>{
     if (id){
+        if (id !== profile.pk){
+            nav(`/${profile.pk}`)
+        } else{
         const fetchMamoos = async()=>{
-            console.log('going')
+            
             const res = await getMyMamoos()
             setMamoos(res.reverse())
         }
-    fetchMamoos()       
+    fetchMamoos()  }     
     }else{
 
         nav('/signin')
