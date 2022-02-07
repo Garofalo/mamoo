@@ -39,7 +39,7 @@ export default function Header({profile, setProfile}){
                 <header>
                     <div onClick={()=>{nav('/mymamoos')}} id="logo-holder"><img alt='mamoo' id="logo" src={logo}/></div>
                 <div className="under-header">
-                    <button onClick={()=>nav(`/${profile.pk}`)}id="username">{profile.username}</button>              
+                    <button onClick={()=>nav(`/mymamoos`)}id="username">{profile.username}</button>              
                     <button onClick={decideButton}>{whichButton}</button>
                     <button  onClick={handleLogout}>Log Out</button>
                     
