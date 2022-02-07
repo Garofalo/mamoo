@@ -14,14 +14,14 @@ export default function UserHome({ profile, setProfile, today}){
 
 useEffect(()=>{
     if (id){
-        if (id !== profile.pk){
-            nav(`/${profile.pk}`)
-        } else{
+        // if (id !== profile.pk){
+        //     nav(`/${profile.pk}`)
+        // } else{
         const fetchMamoos = async()=>{
             
             const res = await getMyMamoos()
             setMamoos(res.reverse())
-        }
+        // }
     fetchMamoos()  }     
     }else{
 
