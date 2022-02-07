@@ -13,7 +13,7 @@ export default function Create({profile}){
         where: "",
         what: "",
         user: profile.pk,
-        when: parseInt((Date.now())/(1000*60*60*24)-29)
+        when: parseInt((Date.now())/(1000*60*60*24))
       });
      
 
