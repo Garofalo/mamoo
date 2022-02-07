@@ -48,21 +48,24 @@ https://whimsical.com/hierarchy-MYk3XXYAmoFciCQXxc14KD@7YNFXnKbYiySs2pump6a3
 
 ![image](https://user-images.githubusercontent.com/9029262/150866368-8cec5248-958a-445b-b84f-446db9d5e1d4.png)
 
+## Link to back end repo:
+
+https://github.com/Garofalo/mamoobackend
 
 
 
-## MVP Functionality
+## MVP Functionality - Complete
 
 -Django Database with three related models - User, Profile and Mamoo - complete
 
 -Backend CRUD functionality on all models - complete
 
--React Frontend with full CRUD functionality
+-React Frontend with full CRUD functionality - complete
 
--Grid Layout
+-Grid Layout - complete
 
--Full Authentication
+-Full Authentication -complete
 
--Mobile First Responsive Design
+-Mobile First Responsive Design - complete
 
 
