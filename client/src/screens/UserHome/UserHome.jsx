@@ -12,6 +12,7 @@ export default function UserHome({ profile, setProfile, today}){
     const {id} = useParams()
     const [mamoos, setMamoos] = useState([])
 
+    
 useEffect(()=>{
     if (id){
 

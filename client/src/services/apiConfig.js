@@ -13,6 +13,7 @@ const getToken = () => {
 const api = axios.create({
   baseURL:
     "https://mamoo-db.herokuapp.com/"
+    // "http://localhost:8000/"
 });
 
 api.interceptors.request.use(
