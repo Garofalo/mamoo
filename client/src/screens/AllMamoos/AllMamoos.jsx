@@ -25,11 +25,11 @@ export default function AllMamoos({profile, today}){
 const mappedMoos = sortedMamoos === null ? myMamoos.map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
-            <h2 className="violet">{`${today - mam.when} days ago`}</h2>
+            <h2 className="violet hover">{`${today - mam.when} days ago >`}</h2>
         </div>): sortedMamoos.map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
-            <h2 className="violet">{`${today - mam.when} days ago`}</h2>
+            <h2 className="violet hover">{`${today - mam.when} days ago >`}</h2>
         </div>)
 
 

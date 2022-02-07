@@ -40,3 +40,7 @@
   #mam-card-container>*{
     margin: 5%;
   }
+
+  .hover:hover{
+    cursor: pointer;
+  }
