@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Mamoo - Full Stack Application Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/9029262/150843098-bd3e36e6-4d72-4a5b-b9d4-12660d95dbfe.png)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+## Application Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This full stack application uses JWT Authentication, React, Node.js, Python, Javascript, Postgresql and Django Rest Framework. The back end is a RESTful API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Functional Overview
 
-### `npm test`
+This full stack application is designed to allow authenticated users to remember in a quantifiable way events that hold significance to them. The users are able to create a note for themselves, a Mamoo, that makes a timestamp upon creation.  That timestamp is then used to present to the user in days how long it has been since that note was created. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes
 
-### `npm run build`
+Home / About
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](https://user-images.githubusercontent.com/9029262/150704331-cf23c630-3e3f-4a37-82a3-551fb85dfee5.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+User Home / Mamoos
 
-### `npm run eject`
+![image](https://user-images.githubusercontent.com/9029262/150704344-8a556715-2488-4a8c-993b-0852d6e8d030.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Mamoo Detail / Create
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://user-images.githubusercontent.com/9029262/150704385-de74e636-80f4-4d99-8f2f-94f1db9dfb1a.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Login / Sign up
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/9029262/150704396-829fadbe-ffae-4033-9fde-33498f90e6e0.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Component Hierarchy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![image](https://user-images.githubusercontent.com/9029262/150816168-6f2c5f1a-a4da-49ff-bf80-91c1632c0c2e.png)
 
-### Making a Progressive Web App
+## Link for readability:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://whimsical.com/hierarchy-MYk3XXYAmoFciCQXxc14KD@7YNFXnKbYiySs2pump6a3
 
-### Advanced Configuration
+## Entitity Relationship Diagram
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![image](https://user-images.githubusercontent.com/9029262/150866368-8cec5248-958a-445b-b84f-446db9d5e1d4.png)
 
-### Deployment
+## Link to back end repo:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+https://github.com/Garofalo/mamoobackend
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## MVP Functionality - Complete
+
+-Django Database with three related models - User, Profile and Mamoo - complete
+
+-Backend CRUD functionality on all models - complete
+
+-React Frontend with full CRUD functionality - complete
+
+-Grid Layout - complete
+
+-Full Authentication -complete
+
+-Mobile First Responsive Design - complete
+
+
