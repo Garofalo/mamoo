@@ -6,11 +6,11 @@
 
 ## Application Technology
 
-This full stack application uses React, Node.js, Python, Javascript, Postgresql and Django.
+This full stack application uses JWT Authentication, React, Node.js, Python, Javascript, Postgresql and Django Rest Framework. The back end is a RESTful API.
 
 ## Functional Overview
 
-This full stack application is designed to allow users to remember in a quantifiable way events that hold significance to them. The users are able to create a note for themselves, a Mamoo, that makes a timestamp upon creation.  That timestamp is then used to present to the user in days how long it has been since that note was created. 
+This full stack application is designed to allow authenticated users to remember in a quantifiable way events that hold significance to them. The users are able to create a note for themselves, a Mamoo, that makes a timestamp upon creation.  That timestamp is then used to present to the user in days how long it has been since that note was created. 
 
 ## Wireframes
 
@@ -53,13 +53,15 @@ https://whimsical.com/hierarchy-MYk3XXYAmoFciCQXxc14KD@7YNFXnKbYiySs2pump6a3
 
 ## MVP Functionality
 
--Django Database with three related models - User, Profile and Mamoo
+-Django Database with three related models - User, Profile and Mamoo - complete
 
--Backend CRUD functionality on all models
+-Backend CRUD functionality on all models - complete
 
 -React Frontend with full CRUD functionality
 
 -Grid Layout
+
+-Full Authentication
 
 -Mobile First Responsive Design
 
