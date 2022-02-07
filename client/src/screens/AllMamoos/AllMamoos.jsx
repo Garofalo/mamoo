@@ -17,7 +17,7 @@ export default function AllMamoos({profile, today}){
         const fetchMyMamoos = async ()=>{
             const res = await getMyMamoos()
             
-            setMyMamoos(res)
+            setMyMamoos(res.reverse())
         }
         fetchMyMamoos()
     }, [profile])
@@ -25,11 +25,11 @@ export default function AllMamoos({profile, today}){
 const mappedMoos = sortedMamoos === null ? myMamoos.map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
-            <h2>{`${today - mam.when} days ago`}</h2>
+            <h2 className="violet">{`${today - mam.when} days ago`}</h2>
         </div>): sortedMamoos.map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
-            <h2>{`${today - mam.when} days ago`}</h2>
+            <h2 className="violet">{`${today - mam.when} days ago`}</h2>
         </div>)
 
 
@@ -47,10 +47,12 @@ const handleChange = (e) => {
 
     return (
         <div>
+            <h1>Memory Lane</h1>
             <div className="box">
                 <select name="sort" onChange={handleChange}>
-                    <option value="Most Distant">Most Distant</option>
                     <option value="Most Recent">Most Recent</option>
+                    <option value="Most Distant">Most Distant</option>
+                    
                     <option value="Good Times">Good Times</option>
                     <option value="Tough Times">Tough Times</option>
                     <option value="Milestones">Milestones</option>

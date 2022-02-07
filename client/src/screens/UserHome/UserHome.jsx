@@ -29,7 +29,7 @@ useEffect(()=>{
     const mamoosRecent = mamoos.slice(0, 3).map(
         (mam) => <div>
             <h1 className="mamoo-link" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{mam.title}</h1>
-            <h2>{`${today - mam.when} days ago`}</h2>
+            <h2 className="violet">{`${today - mam.when} days ago`}</h2>
         </div>
       )
 
@@ -49,6 +49,9 @@ const mamooList = function(){
  
         
         <div>
+            <div>
+                <h1>Your Recent Mamoos</h1>
+            </div>
             <div>{mamooList()}</div>
             <button onClick={()=>(nav('/mymamoos/'))}>All Mamoos</button>
         </div>}

@@ -7,14 +7,14 @@
 export const sortMamoos = function(arr, type){
 
 
-    if(type === "Most Recent"){
+    if(type === "Most Distant"){
        
         let output =    [...arr].reverse();   
         return output
         
         
     }
-    else if(type === "Most Distant"){
+    else if(type === "Most Recent"){
         
         return arr;
 
