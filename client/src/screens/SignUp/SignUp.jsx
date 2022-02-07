@@ -72,6 +72,7 @@ const onSignUp = async (e) => {
           {renderError()}
         
         <div className='sign-up-bottom'>
+        <button id="about" onClick={()=>nav('/signin')}>Have an Account? Click Here</button>
                  <button id="about" onClick={()=>nav('/about')}>What's a Mamoo? Click Here</button>
           </div>
  
