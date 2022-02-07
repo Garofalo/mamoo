@@ -38,6 +38,9 @@ button {
   color: #5e17eb;
   font-size: 2em;
 }
+button:hover{
+  cursor: pointer;
+}
 input, textarea{
   padding:3%;
   background-color: #D1CBFF;
