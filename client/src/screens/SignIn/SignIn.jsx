@@ -41,11 +41,11 @@ const onSignUp = async (e) => {
     if (isError === true) {
       return (<>
         <h2>{errorMsg}</h2>
-        <button className='buttonR' id="sign-in" onClick={onSignUp} type="submit">Try Again</button>
+        <button className='buttonR' id="sign-in" onClick={onSignUp} type="submit">{`Try Again >`}</button>
       </>
       )
     } else {
-      return <button className='buttonR' id="sign-in" onClick={onSignUp} type="submit">Submit Details</button>
+      return <button className='buttonR' id="sign-in" onClick={onSignUp} type="submit">Sign In ></button>
     }
   }
   return (
@@ -57,13 +57,15 @@ const onSignUp = async (e) => {
 
         <h2 className='sign-up-form-text'>Password</h2>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-
+        <div className='error-buttons'>
+          {renderError()}
+        </div>
         
       </form>
       </div>
-      <div className='error-buttons'>
+      {/* <div className='error-buttons'>
           {renderError()}
-        </div>
+        </div> */}
         <div className='bottom-sign-in'>  
             <button className="nav-button" onClick={()=>nav('/signup')}>No Account? Click Here</button>
             <button className="nav-button" onClick={()=>nav('/about')}>What's a Mamoo? Click Here</button>

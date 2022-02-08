@@ -47,7 +47,7 @@ const handleChange = (e) => {
 
 
     return (
-        <div>
+        <div className="all">
             <h1>Memory Lane</h1>
             <div className="box">
                 <select name="sort" onChange={handleChange}>

@@ -15,12 +15,66 @@ header{
     flex-direction: column;
     margin-bottom: 3%;
 }
-.under-header{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: .5em;
-}
-#username{
 
-    font-family: 'Roboto Condensed', sans-serif;
+
+.menu-button{
+    
+    height: 75px;
+    width: 150px;
+}
+.down{
+    background-image: url('../../files/menuUp.png');
+}
+.up{
+    background-image: url('../../files/menuDown.png');
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.display-nav{
+    font-size: 5em;
+}
+.dropdown > *{
+    font-size: 1em;
+}
+
+@media (max-width:500px){
+    .menu-button{
+        height: 50px;
+        width: 100px;
+        background-size: cover;
+    }
+    .dropdown>*{
+        font-size: .7em;
+    }
+    .menu{
+        margin-left: 3%;
+    }
+    .left-header{
+        position: absolute;
+        font-size: 1em;
+        margin-left: 63%;
+        margin-top: 7%;
+    }
+    .back-left-header{
+        
+            position: absolute;
+            font-size: 1em;
+            margin-left: 63%;
+            margin-top: 7%;
+        
+    }
+    
 }

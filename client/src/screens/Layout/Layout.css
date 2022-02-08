@@ -5,7 +5,8 @@
 }
 .layout-children{
     grid-column: 1/6;
-    grid-row: 2/11;
+    grid-row: 3/11;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(8, 1fr);
+    
 }
