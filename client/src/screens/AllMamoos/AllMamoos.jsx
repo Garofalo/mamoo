@@ -31,7 +31,7 @@ const mappedMoos = sortedMamoos === null ? myMamoos.map(
         (mam) => <div>
             <h1 className="mamoo-link" >{mam.title}</h1>
             <h2 className="violet hover" onClick={()=>nav(`/mymamoos/${mam.pk}`)}>{`${today - mam.when} days ago >`}</h2>
-        </div>)
+            </div>)
 
 
 const handleChange = (e) => {
