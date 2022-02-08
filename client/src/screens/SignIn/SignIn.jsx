@@ -4,8 +4,7 @@ import { logIn } from '../../services/apiConfig'
 import { useNavigate } from 'react-router-dom'
 import './SignIn.css'
 
-
-export default function SignIn({ setProfile }) {
+export default function SignIn({ setProfile, }) {
 
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
@@ -71,5 +70,6 @@ const onSignUp = async (e) => {
         </div>
         
     </div>
+
   )
 }

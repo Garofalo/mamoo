@@ -1,11 +1,12 @@
 
-import {  useState } from "react";
+import {  useState, useEffect } from "react";
 import { createMamoo } from "../../services/apiConfig";
 import { useNavigate } from "react-router-dom";
 import "./Create.css"
 
 export default function Create({profile}){
 
+  const [validate, setValidate] = useState("")
     const nav = useNavigate()
     const [mam, setMam] = useState({
         title: "",
@@ -17,6 +18,7 @@ export default function Create({profile}){
       });
      
 
+
 const handleChange = (e) => {
         const { name, value } = e.target;
         setMam({
@@ -24,7 +26,7 @@ const handleChange = (e) => {
           [name]: value,
         });
       };
-const [validate, setValidate] = useState("")
+
 
 const handleSubmit = async (e) => {
         e.preventDefault();
@@ -56,6 +58,8 @@ const handleSubmit = async (e) => {
 
 
     return(
+
+      
     <form  onSubmit={handleSubmit}>
       <div >
 
@@ -106,5 +110,6 @@ const handleSubmit = async (e) => {
       </div>
       
     </form>
+  
     )
 }

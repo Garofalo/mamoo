@@ -9,7 +9,7 @@ import './MamooDetail.css'
 
 
 
-export default function MamooDetail({profile, today}){
+export default function MamooDetail({ today,profile}){
     const { id } = useParams()
     const [mamoo, setMamoo] = useState({})
 
@@ -81,11 +81,13 @@ function renderError(){
 
 
     return(
+        
         <div>
             
         {renderError()}
     
     
         </div>
+ 
     )
 }

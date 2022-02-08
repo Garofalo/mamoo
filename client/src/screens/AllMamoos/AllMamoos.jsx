@@ -5,7 +5,8 @@ import { sortMamoos } from "../../components/MamooSorter/MamooSorter"
 import './AllMamoos.css'
 
 
-export default function AllMamoos({profile, today}){
+
+export default function AllMamoos({profile, today,  }){
 
     
     const [myMamoos, setMyMamoos] = useState([])
@@ -16,7 +17,7 @@ export default function AllMamoos({profile, today}){
     useEffect(()=>{
         const fetchMyMamoos = async ()=>{
             const res = await getMyMamoos()
-            
+
             setMyMamoos(res.reverse())
         }
         fetchMyMamoos()
@@ -64,5 +65,6 @@ const handleChange = (e) => {
             </div> 
         
         </div>
+     
     )
 }

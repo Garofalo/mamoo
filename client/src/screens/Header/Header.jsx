@@ -1,35 +1,35 @@
-import { useNavigate} from "react-router-dom";
+import { useNavigate, Link} from "react-router-dom";
 import { logOut } from "../../services/apiConfig";
 import logo from "../../files/logo.png"
-
-import './Header.css'
 import { useState } from "react";
 
+import './Header.css'
 
-export default function Header({profile, setProfile}){
+
+export default function Header({profile, setProfile }){
 
     const user = profile === null ? false : true
     const nav = useNavigate()
-    const [createToggle, setCreateToggle] = useState(true)
+    const [createToggle, setCreateToggle] = useState(false)
 
-    const handleLogout = async (e) => {
-        e.preventDefault()
+    const handleLogout = async () => {
+        
             const res = await logOut()
             if (res){
-                console.log(res)
+                setCreateToggle(false)
                 setProfile(null)
                 nav('/signin')
             }
             
         }
-    
-    const whichToGo = createToggle === true ? "create" : `mymamoos`
-    const whichButton = createToggle === true ? "Make a Mamoo" : "Back to Home"
+    const goToCreate = function(){
+        setCreateToggle(true)
+        nav('/create')
+    }
 
-
-    const decideButton = function(){
-        setCreateToggle(e=>!e)
-        nav(`/${whichToGo}`)
+    const leaveCreate = function(){
+        setCreateToggle(false)
+        nav('/mymamoos')
     }
 
     return(
@@ -38,10 +38,13 @@ export default function Header({profile, setProfile}){
                 user === true ?  
                 <header>
                     <div onClick={()=>{nav('/mymamoos')}} id="logo-holder"><img alt='mamoo' id="logo" src={logo}/></div>
-                <div className="under-header">
-                    <button onClick={()=>nav(`/mymamoos`)}id="username">{profile.username}</button>              
-                    <button onClick={decideButton}>{whichButton}</button>
-                    <button  onClick={handleLogout}>Log Out</button>
+                    <div className="under-header">
+                    <button onClick={()=>nav(`/mymamoos`)}id="username">{profile.username}</button>
+                    {
+                        createToggle === false ? <button onClick={goToCreate}>Create a Mamoo</button> :  <button onClick={leaveCreate}>Back</button>
+                    }              
+                   
+                    <Link to='/signin' ><button  onClick={handleLogout}>Log Out</button></Link>
                     
                     </div>
                 </header> 
