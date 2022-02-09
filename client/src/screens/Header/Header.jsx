@@ -104,7 +104,7 @@ export default function Header({profile, setProfile }){
                     }</div>
                 </header>
                  : 
-                 <header>
+                 <header className="landing">
  
                      <div id="logo-holder"><img id="logo" alt="mamoo" src={logo}/></div>
                  </header>

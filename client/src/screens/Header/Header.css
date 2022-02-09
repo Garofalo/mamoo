@@ -32,6 +32,10 @@ header{
 .up{
     background-image: url('../../files/menuDown.png');
 }
+.landing{
+    display: flex;
+    justify-content: center;
+}
 
 .dropdown{
     display: none;
