@@ -1,7 +1,7 @@
 import { useNavigate, Link} from "react-router-dom";
 import { logOut } from "../../services/apiConfig";
 import logo from "../../files/logo.png"
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 import './Header.css'
 
@@ -15,22 +15,23 @@ export default function Header({profile, setProfile }){
     const user = profile === null ? false : true
     const nav = useNavigate()
     const [createToggle, setCreateToggle] = useState(false)
-    // const [showMenu, setShowMenu] = useState("hide")
-    // const [downUp, setDownUp] = useState("up")
+
     const [{ showMenu, downUp },setState] = useState(initialState)
     const clearState = () => {setState({ ...initialState });}
 
     const handleLogout = async () => {
         
+        setCreateToggle(false)
+        setProfile(null)
             const res = await logOut()
             if (res){
-                setCreateToggle(false)
-                setProfile(null)
-                nav('/signin')
+                
+                
                 setTimeout(() => {
                     clearState();
                 }, 1000)
             }
+        nav('/signin')
             
         }
     const goToCreate = function(){
@@ -75,7 +76,7 @@ export default function Header({profile, setProfile }){
                 downUp: "down"
             })
         }
-        console.log('hi')
+
     }
 
 
@@ -85,14 +86,14 @@ export default function Header({profile, setProfile }){
                 user === true ?  
                 <header>
                     <div className="menu">
-                    <button className={`menu-button ${downUp}`} onClick={toggleUpDown}/>
+                        <button className={`menu-button ${downUp}`} onClick={toggleUpDown}/>
                    
                         <div className={`${showMenu} dropdown`}>
-                        <button className="display-nav" onClick={goToHome}id="username">Home ></button>
-                        <button className="display-nav" onClick={goToCreate}>Make a Mamoo ></button> 
-                        <button className="display-nav" onClick={goToAbout}>About ></button>
-                        <button  className="display-nav" onClick={handleLogout}>Log Out ></button>
-                        
+                            <button className="display-nav" onClick={goToHome}id="username">Home ></button>
+                            <button className="display-nav" onClick={goToCreate}>Make a Mamoo ></button> 
+                            <button className="display-nav" onClick={goToAbout}>About ></button>
+                            <button  className="display-nav" onClick={handleLogout}>Log Out ></button>
+                            
                         </div>
                
                     

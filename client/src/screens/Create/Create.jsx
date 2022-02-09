@@ -1,5 +1,5 @@
 
-import {  useState, useEffect } from "react";
+import {  useState } from "react";
 import { createMamoo } from "../../services/apiConfig";
 import { useNavigate } from "react-router-dom";
 import "./Create.css"
@@ -13,7 +13,7 @@ export default function Create({profile}){
         type: "",
         where: "",
         what: "",
-        user: profile.pk,
+        user: "",
         when: parseInt((Date.now())/(1000*60*60*24))
       });
      
@@ -31,6 +31,11 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
         e.preventDefault();
         setValidate("")
+        
+        setMam({
+          ...mam,
+          user: profile.pk
+        })
       if(mam.title === "" || mam.type === "") {
         setValidate("validate")
       } else {setMam({
