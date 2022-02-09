@@ -12,11 +12,15 @@
 }
 header{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 3%;
+
+   
 }
 
-
+.head-holder{
+    grid-column: 1/span 6;
+}
 .menu-button{
     
     height: 75px;
@@ -48,6 +52,9 @@ header{
 }
 .dropdown > *{
     font-size: 1em;
+}
+.flex-abs-holder{
+    width: 250px;
 }
 
 @media (max-width:500px){

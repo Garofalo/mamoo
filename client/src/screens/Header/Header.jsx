@@ -81,26 +81,27 @@ export default function Header({profile, setProfile }){
 
 
     return(
-        <div>
+        <div className="head-holder">
            {
                 user === true ?  
                 <header>
-                    <div className="menu">
-                        <button className={`menu-button ${downUp}`} onClick={toggleUpDown}/>
+                    
+                        <div className="menu">
+                            <button className={`menu-button ${downUp}`} onClick={toggleUpDown}/>
                    
-                        <div className={`${showMenu} dropdown`}>
+                            <div className={`${showMenu} dropdown`}>
                             <button className="display-nav" onClick={goToHome}id="username">Home ></button>
                             <button className="display-nav" onClick={goToCreate}>Make a Mamoo ></button> 
                             <button className="display-nav" onClick={goToAbout}>About ></button>
                             <button  className="display-nav" onClick={handleLogout}>Log Out ></button>
                             
-                        </div>
+                            </div>
                
+                        </div>
                     
-                    </div>
-                    {
+                    <div>{
                         createToggle === false ? <button className='left-header' onClick={goToCreate}>Make a Mamoo ></button> :  <button className='back-left-header' onClick={leaveCreate}>{`< Back`}</button>
-                    }
+                    }</div>
                 </header>
                  : 
                  <header>

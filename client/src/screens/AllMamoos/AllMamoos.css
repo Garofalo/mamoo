@@ -32,12 +32,12 @@
     padding: 30px;
   }
 
-  #mam-card-container{
+  #mapped-moos{
     display: flex;
     flex-direction: column;
   }
   
-  #mam-card-container>*{
+  #mapped-moos>*{
     margin: 5%;
   }
 

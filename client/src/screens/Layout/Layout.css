@@ -1,12 +1,12 @@
 .layout{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 10vh);
 }
 .layout-children{
     grid-column: 1/6;
-    grid-row: 2/11;
+    grid-row: 2/span 10;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     
 }
