@@ -24,6 +24,7 @@ const handleChange = (e) => {
         setMam({
           ...mam,
           [name]: value,
+          user: profile.pk
         });
       };
 
@@ -31,11 +32,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
         e.preventDefault();
         setValidate("")
-        
-        setMam({
-          ...mam,
-          user: profile.pk
-        })
+
       if(mam.title === "" || mam.type === "") {
         setValidate("validate")
       } else {setMam({
